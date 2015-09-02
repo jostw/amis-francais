@@ -46,15 +46,6 @@
                 </div>
             </div>
 
-            <input id="ans" class="form-control ans" type="text" name="ans" tabindex="1" placeholder="在此輸入">
-
-            <button id="submit" class="btn btn-primary submit" tabindex="2">送出</button>
-            <button id="no-content" class="btn no-content btn-danger" tabindex="3">這是空白</button>
-            <button id="unclear" class="btn btn-warning unclear" tabindex="-1">圖片不清楚</button>
-
-            <input id="ans-shadow" class="form-control ans-shadow" type="text" readonly="true" tabindex="-1">
-            <div class="tip">神乎其技的快速鍵參考：Enter: 送出 / shift+Enter: 這是空白 / ctrl+Enter: 這答案沒錯</div>
-
             <div class="cell">
                 <h3 class="cell-title">校對圖</h3>
 
@@ -65,6 +56,15 @@
 
                 <div class="cell-image"></div>
             </div>
+
+            <input id="ans" class="form-control ans" type="text" name="ans" tabindex="1" placeholder="在此輸入">
+
+            <button id="submit" class="btn btn-primary submit" tabindex="2">送出</button>
+            <button id="no-content" class="btn no-content btn-danger" tabindex="3">這是空白</button>
+            <button id="unclear" class="btn btn-warning unclear" tabindex="-1">圖片不清楚</button>
+
+            <input id="ans-shadow" class="form-control ans-shadow" type="text" readonly="true" tabindex="-1">
+            <div class="tip">神乎其技的快速鍵參考：Enter: 送出 / shift+Enter: 這是空白 / ctrl+Enter: 這答案沒錯</div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
