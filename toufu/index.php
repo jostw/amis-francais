@@ -21,7 +21,7 @@
             <h4>目前戰況：一校</h4>
             <h4>進度：</h4>
             <div class="progress">
-                <div class="bar" style="width: 80%;"></div>
+                <div class="bar"></div>
                 <span id="progress_text"></span>
             </div>
 
@@ -41,22 +41,22 @@
                 </p>
             </div>
 
-            <div width="100%">
+            <div>
                 <input id="ans" class="form-control ans" type="text" name="ans" tabindex="1" placeholder="在此輸入">
             </div>
 
             <button id="submit" class="btn btn-primary submit" tabindex="2">送出</button>
             <button id="no-content" class="btn no-content btn-danger" tabindex="3">這是空白</button>
-            <button id="unclear" class="btn btn-warning unclear" tabindex="-1" style="display: none;">圖片不清楚</button>
+            <button id="unclear" class="btn btn-warning unclear" tabindex="-1">圖片不清楚</button>
 
-            <input id="ans-shadow" class="form-control ans-shadow" type="text" readonly="true" tabindex="-1" style="display: none">
+            <input id="ans-shadow" class="form-control ans-shadow" type="text" readonly="true" tabindex="-1">
             <div class="tip">神乎其技的快速鍵參考： Enter: 送出 / shift+Enter: 這是空白 / ctrl+Enter: 這答案沒錯</div>
 
             <h3>校對圖</h3>
 
             <div>
                 <span class="cell-info"></span>
-                <button id="confirm" class="btn btn-success confirm" tabindex="5566" style="display: none; margin-left: 43%">這答案沒錯</button>
+                <button id="confirm" class="btn btn-success confirm" tabindex="5566">這答案沒錯</button>
             </div>
 
             <div class="cell-image"></div>

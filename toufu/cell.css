@@ -15,18 +15,19 @@ h4 {
     position: relative;
 }
 
-.bar {
+.progress .bar {
     position: absolute;
     z-index: 1;
+    width: 80%;
 }
 
 .progress span {
     position: absolute;
     top: 0;
     z-index: 2;
+    color: black; // You might need to change it
     width: 100%;
     text-align: center;
-    color: black; // You might need to change it
 }
 
 .man {
@@ -57,21 +58,28 @@ h4 {
 }
 
 #unclear {
+    display: none;
     margin-bottom: 10px;
 }
 
-.ans-shadow {
-    position: absolute !important;
+#ans-shadow {
+    position: absolute;
     z-index: -1;
-    color: #C8C8C8 !important;
-    background-color: #FFF !important;
+    display: none;
+    color: #C8C8C8;
+    background-color: #FFF;
 }
 
 .tip {
     color: #BBB;
 }
 
-/* unused style */
+.confirm {
+    display: none;
+    margin-left: 43%;
+}
+
+/* unused styles */
 .manual {
     color: #333;
 }
