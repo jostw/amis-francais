@@ -1,48 +1,63 @@
 body {
     padding-top: 40px;
 }
+
 #unclear {
     margin-bottom: 10px;
 }
-.submit,.no-content {
+
+.submit,
+.no-content {
     margin-bottom: 10px;
 }
+
 a:hover {
     cursor: pointer;
 }
+
 .tip {
     color: #bbb;
 }
+
 .manual {
     color: #333;
 }
+
 .quick-answer {
     display: none;
 }
+
 .qa-group {
     margin-bottom: 3px;
 }
+
 .autocomplete {
     display: inline;
     margin-left: 30px;
 }
+
 .autocomplete .checkbox{
     margin-bottom: 6px;
 }
+
 .ans {
     background-color: transparent !important;
     width: 70%;
 }
-input#ans {
+
+#ans {
     padding: 10px; font-size: 1.5em; height: 1em;
 }
+
 .ans-shadow {
     position: absolute !important;
     z-index: -1;
     background-color: #fff !important;
     color: #c8c8c8 !important;
 }
+
 .cell-image {
+
 }
 
 .progress {
@@ -64,22 +79,22 @@ input#ans {
 }
 
 #txt {
-  position: absolute;
-  width: 45%;
-  margin-left: 3%;
-  font-size: 12pt;
-  margin-left: 51%;
+    position: absolute;
+    width: 45%;
+    margin-left: 3%;
+    font-size: 12pt;
+    margin-left: 51%;
 }
 
 #img {
-  position: absolute;
-  width: 50%;
+    position: absolute;
+    width: 50%;
 }
 
 #img img {
-  margin-top: -140px;
-  width: 100%;
-  height: auto;
+    margin-top: -140px;
+    width: 100%;
+    height: auto;
 }
 
 h4 {
