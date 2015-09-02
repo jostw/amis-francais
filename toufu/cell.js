@@ -10,6 +10,17 @@ $(document).ready(function() {
 
     shadow();
 
+    var setProgress = function(data) {
+        console.log(data);
+
+        if (data["cnt"] !== undefined) {
+            var percent = Math.round(10000 * data["cnt"] / 15829) / 100;
+
+            $(".bar").css("width", "" + percent + "%");
+            $("#progress_text").text("已完成 " + data["cnt"] + " / 15829 (" + percent + "%)");
+        }
+    };
+
     var submitAnswer = function(e) {
         if (e !== undefined) {
             e.preventDefault();
@@ -68,6 +79,8 @@ $(document).ready(function() {
         });
     };
 
+
+
     var question_pools = [];
 
     var getRandomImage = function() {
@@ -91,7 +104,7 @@ $(document).ready(function() {
 
     getRandomImage();
 
-    function thisIsEmpty() {
+    var thisIsEmpty = function() {
         var p = $(".cell-info").data("p");
         var par = $(".cell-info").data("par");
         var url = "submit.php";
@@ -99,18 +112,7 @@ $(document).ready(function() {
         $.post(url, { p: p, par: par, ans: "[這是空白]" }, setProgress);
 
         getRandomImage();
-    }
-
-    function setProgress(data) {
-        console.log(data);
-
-        if (data["cnt"] != undefined) {
-            var percent = Math.round(10000 * data["cnt"] / 15829) / 100;
-
-            $(".bar").css("width", "" + percent + "%");
-            $("#progress_text").text("已完成 " + data["cnt"] + " / 15829 (" + percent + "%)");
-        }
-    }
+    };
 
     $("#submit").click(submitAnswer);
     $("#no-content").click(thisIsEmpty);
@@ -134,7 +136,7 @@ $(document).ready(function() {
     $("#next").click(getRandomImage);
 
     $("#ans").keypress(function(e) {
-        if (e.which == 13) {
+        if (e.which === 13) {
             if (e.shiftKey) {
                 thisIsEmpty();
             } else {
