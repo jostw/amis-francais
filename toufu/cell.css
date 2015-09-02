@@ -1,5 +1,5 @@
 body {
-    padding-top: 40px;
+    padding: 40px 0 50px;
 }
 
 a:hover {
@@ -11,27 +11,51 @@ h4 {
     color: #AAA;
 }
 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.status .right {
+    position: relative;
+    width: 75%;
+    padding-left: 60px;
+}
+
+.status .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .progress {
     position: relative;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
 .progress .bar {
     position: absolute;
     z-index: 1;
     width: 0;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    background-image: linear-gradient(to bottom, #FFEE58, #FFEB3B);
 }
 
-.progress span {
-    position: absolute;
-    top: 0;
+.progress .text {
+    position: relative;
     z-index: 2;
-    color: black; // You might need to change it
-    width: 100%;
-    text-align: center;
+    padding-left: 2em;
+    font-size: 12px;
+    color: black;
 }
 
 .man {
-    margin-bottom: 30px;
+    margin: .5em 0 1.5em;
     padding: 20px;
     background-color: #EEE;
 }
@@ -41,25 +65,59 @@ h4 {
 }
 
 #ans {
+    box-sizing: border-box;
     width: 100%;
-    height: 1em;
-    padding: 10px;
+    height: 2em;
+    padding: 10px 1em;
     font-size: 1.5em;
-}
-
-.ans {
-    width: 70%;
-    background-color: transparent !important;
+    background-color: transparent;
 }
 
 .submit,
+.no-content,
+.unclear {
+    width: 125px;
+    margin: .125em .75em 1em 0;
+    border: 0;
+    padding: .5em 1em;
+    box-shadow: none;
+    text-shadow: none;
+    background-image: none;
+    transition: background-color .2s;
+}
+
+.submit:hover,
+.no-content:hover,
+.unclear:hover {
+    transition: background-color .2s;
+}
+
+.submit {
+    background-color: #2196F3;
+}
+
+.submit:hover {
+    background-color: #1976D2;
+}
+
 .no-content {
-    margin-bottom: 10px;
+    background-color: #00BFA5;
+}
+
+.no-content:hover {
+    background-color: #009688;
+}
+
+.unclear {
+    background-color: #FF9800;
+}
+
+.unclear:hover {
+    background-color: #F57C00;
 }
 
 #unclear {
     display: none;
-    margin-bottom: 10px;
 }
 
 #ans-shadow {
@@ -72,6 +130,27 @@ h4 {
 
 .tip {
     color: #BBB;
+}
+
+.cell {
+    position: relative;
+}
+
+.cell-title {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #DDD;
+    line-height: 2em;
+}
+
+.cell-status {
+    position: absolute;
+    top: 1.25em;
+    left: 8em;
+    color: #BF360C;
+}
+
+.cell-image {
+    margin-bottom: 3em;
 }
 
 .confirm {

@@ -65,10 +65,10 @@ $(document).ready(function() {
                 ans: res.ans
             })
             .text("")
-            .append($("<span></span>").text("第 " + res.p + " 頁, 第 " + res.par + " 行 "));
+            .append($("<span></span>").text("第 " + res.p + " 頁，第 " + res.par + " 行 "));
 
             if (res.ans !== null) {
-                $(".cell-info").append($("<span></span>").text(" 已經有" + res.cnt + "人填寫確認了。"));
+                $(".cell-info").append($("<span></span>").text(" 已經有 " + res.cnt + " 人填寫確認了。"));
                 $("#ans").val(res.ans);
             }
 

@@ -18,11 +18,16 @@
     <body>
         <div class="container">
             <h3>阿美語-法語字典OCR校對</h3>
-            <h4>目前戰況：一校</h4>
-            <h4>進度：</h4>
-            <div class="progress">
-                <div class="bar"></div>
-                <span id="progress_text"></span>
+
+            <div class="status clearfix">
+                <h4 class="left">目前戰況：一校</h4>
+                <div class="right">
+                    <h4 class="title">進度：</h4>
+                    <div class="progress">
+                        <div class="bar"></div>
+                        <span class="text" id="progress_text"></span>
+                    </div>
+                </div>
             </div>
 
             <div class="man">
@@ -33,33 +38,33 @@
                     手寫的字體不要打呦，謝謝。
                 </p>
 
-                <p>
+                <div>
                     <span id="manual-link">
                         <a href="https://g0v.hackpad.com/ep/pad/static/0dhleAxPa9c">詳細說明書請按我</a>
                     </span>
                     <span>特殊符號參考：&nbsp;&nbsp;&nbsp;&nbsp;é &nbsp; è &nbsp; ç &nbsp; à &nbsp; â &nbsp; ê &nbsp; î &nbsp; ô &nbsp; û &nbsp; ä &nbsp; ë &nbsp; ï &nbsp; ö &nbsp; ü</span>
-                </p>
+                </div>
             </div>
 
-            <div>
-                <input id="ans" class="form-control ans" type="text" name="ans" tabindex="1" placeholder="在此輸入">
-            </div>
+            <input id="ans" class="form-control ans" type="text" name="ans" tabindex="1" placeholder="在此輸入">
 
             <button id="submit" class="btn btn-primary submit" tabindex="2">送出</button>
             <button id="no-content" class="btn no-content btn-danger" tabindex="3">這是空白</button>
             <button id="unclear" class="btn btn-warning unclear" tabindex="-1">圖片不清楚</button>
 
             <input id="ans-shadow" class="form-control ans-shadow" type="text" readonly="true" tabindex="-1">
-            <div class="tip">神乎其技的快速鍵參考： Enter: 送出 / shift+Enter: 這是空白 / ctrl+Enter: 這答案沒錯</div>
+            <div class="tip">神乎其技的快速鍵參考：Enter: 送出 / shift+Enter: 這是空白 / ctrl+Enter: 這答案沒錯</div>
 
-            <h3>校對圖</h3>
+            <div class="cell">
+                <h3 class="cell-title">校對圖</h3>
 
-            <div>
-                <span class="cell-info"></span>
-                <button id="confirm" class="btn btn-success confirm" tabindex="5566">這答案沒錯</button>
+                <div class="cell-status">
+                    <span class="cell-info"></span>
+                    <button id="confirm" class="btn btn-success confirm" tabindex="5566">這答案沒錯</button>
+                </div>
+
+                <div class="cell-image"></div>
             </div>
-
-            <div class="cell-image"></div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
